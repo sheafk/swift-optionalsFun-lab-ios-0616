@@ -12,7 +12,7 @@
 /*: question1
  ### 1. What is the type of the variable `pet` declared below?
  */
-var pet = "turtle 🐢"
+var pet = "turtle 🐢" //This is a String
 
 
 
@@ -22,7 +22,7 @@ var pet = "turtle 🐢"
 /*: question2
  ### 2. What is the type of the variable `petName` declared below?
  */
-var petName: String?
+var petName: String? //This is a String Optional
 
 
 
@@ -32,7 +32,7 @@ var petName: String?
 /*: question3
  ### 3. Currently, what is the _value_ of `petName`?
  */
-
+//The value of petName is nil
 
 
 
@@ -45,8 +45,9 @@ var petName: String?
 // write your code here
 
 
+petName = "Snickers"
 
-
+//petName is still a string optional
 
 
 
@@ -55,7 +56,7 @@ var petName: String?
  */
 // write your code here
 
-
+print(petName) // It shows that it is an optional.
 
 
 
@@ -67,7 +68,15 @@ var petName: String?
 // write your code here
 
 
+if petName != nil {
+    
+    print(petName)
+    
+}
 
+else {
+    print("There is no pet name")
+}
 
 
 
@@ -78,7 +87,10 @@ var petName: String?
 // write your code here
 
 
-
+if let unwrappedPetName = petName {
+    
+    print(unwrappedPetName)
+}
 
 
 
@@ -89,8 +101,9 @@ var petName: String?
 var anotherPetName: String?
 // write your code here
 
-
-
+if anotherPetName == nil {
+    print("The value of anotherPetName is nil")
+}
 
 
 
@@ -100,7 +113,13 @@ var anotherPetName: String?
  */
 // write your code here
 
-
+if let anotherPetName = anotherPetName {
+    
+    print(anotherPetName)
+}
+else {
+    print("anotherPetName has no value")
+}
 
 
 
@@ -112,6 +131,11 @@ var anotherPetName: String?
  ### 10. Declare a _constant_ optional string (using the `let` keyword). Then try to assign a string value to it on the next line. Print out the constant. What happens?
  */
 // write your code here
+
+let testOptional: String?
+testOptional = "WHAT!"
+
+print(testOptional)  //This is the same as setting the string optional with var.
 
 
 
@@ -127,7 +151,10 @@ var anotherPetName: String?
 // write your code here
 
 
+let otherOpt: String? = nil
+//otherOpt = "Not actually nil!" This doesn't work.
 
+print(otherOpt)
 
 
 
